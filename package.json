@@ -6,14 +6,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "dev": "concurrently \"pnpm --filter mfe-next dev\" \"pnpm --filter mfe-solid dev\" \"pnpm --filter shell dev\"",
-     "dev:all": "concurrently \"pnpm dev\" \"pnpm --filter backend start: dev\""
+    "dev": "concurrently \"pnpm --filter shell dev\" \"pnpm --filter mfe-next dev\" \"pnpm --filter mfe-solid dev\" \"npm --filter mfe-svelte dev\" ",
+    "dev:all": "concurrently \"pnpm dev\" \"pnpm --filter backend start: dev\""
   },
-  "keywords": [],
+  "keywords": [
+    
+  ],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.12.4",
   "devDependencies": {
     "concurrently": "^9.2.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
