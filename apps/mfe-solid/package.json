@@ -2,7 +2,7 @@
   "name": "example-basic",
   "type": "module",
   "scripts": {
-    "dev": "vinxi dev --host 127.0.0.1 --port 3002",
+    "dev": "cross-env HOST=127.0.0.1 PORT=3002 vinxi dev",
     "build": "vinxi build --port 3002",
     "start": "vinxi start --port 3002",
     "version": "vinxi version"
@@ -16,5 +16,8 @@
   },
   "engines": {
     "node": ">=22"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
