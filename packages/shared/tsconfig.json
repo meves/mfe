@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@mfe/shared": ["packages/shared/src"],
+      "@mfe/ui": ["packages/ui/src"]
+    }
+  },
+  "include": [],
+  "references": [
+    { "path": "packages/shared" },
+    { "path": "packages/ui" },
+    { "path": "apps/shell" },
+    { "path": "apps/mfe-solid" },
+    { "path": "apps/mfe-next" },
+    { "path": "apps/mfe-svelte" },
+    { "path": "apps/backend" }
+  ]
+}

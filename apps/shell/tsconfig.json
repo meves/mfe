@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -18,9 +19,13 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // обязательно
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "@mfe/shared": ["../../packages/shared/src"],
+      "@mfe/ui": ["../../packages/ui/src"]
+    },
+    "outDir": "dist"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
